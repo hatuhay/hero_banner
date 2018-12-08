@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Contains hero_banner.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function hero_banner_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the hero_banner module.
+    case 'help.page.hero_banner':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Hero banner with parallax effect') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function hero_banner_theme() {
+  return [
+    'hero_banner' => [
+      'variables' => [
+        'titulo' => NULL,
+        'texto' => NULL,
+        'texto_link' => NULL,
+        'link' => NULL,
+        'imagen' => NULL,
+      ],
+    ],
+    'youtube_banner' => [
+      'variables' => [
+        'titulo' => NULL,
+        'texto' => NULL,
+        'texto_link' => NULL,
+        'link' => NULL,
+        'url_video' => NULL,
+      ],
+    ],
+  ];
+}

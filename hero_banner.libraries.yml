@@ -1,0 +1,10 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      css/hero-banner.css: {}
+youtube:
+  version: 1.x
+  css:
+    theme:
+      css/youtube.css: {}

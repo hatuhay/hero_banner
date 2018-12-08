@@ -1,0 +1,8 @@
+name: 'Hero banner'
+type: module
+description: 'Hero banner with parallax effect'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - block
+  - image

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/hero_banner",
+  "type": "drupal-module",
+  "description": "Hero banner with parallax effect",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/hero_banner",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/hero_banner",
+    "source": "http://cgit.drupalcode.org/hero_banner"
+  },
+  "require": { }
+}

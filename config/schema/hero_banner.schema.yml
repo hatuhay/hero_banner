@@ -1,0 +1,19 @@
+block.settings.hero_block:
+  type: block_settings
+  label: 'Hero Banner'
+  mapping:
+    titulo:
+      type: label
+      label: 'Titulo'
+    texto:
+      type: text
+      label: 'Texto'
+    texto_link:
+      type: text
+      label: 'Texto Link'
+    link:
+      type: text
+      label: 'Link'
+    imagen:
+      type: file
+      label: 'Imagen'

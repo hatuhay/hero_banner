@@ -8,3 +8,8 @@ youtube:
   css:
     theme:
       css/youtube.css: {}
+video:
+  version: 1.x
+  css:
+    theme:
+      css/video.css: {}

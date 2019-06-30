@@ -37,11 +37,11 @@ class HeroBlock extends BlockBase {
       '#weight' => '1',
     ];
     $form['texto'] = [
-      '#type' => 'textfield',
+      '#type' => 'textarea',
       '#title' => $this->t('Texto'),
     '#description' => $this->t('Texto del banner'),
       '#default_value' => $this->configuration['texto'],
-      '#maxlength' => 128,
+      '#maxlength' => 640,
       '#size' => 64,
       '#weight' => '2',
     ];
@@ -67,8 +67,9 @@ class HeroBlock extends BlockBase {
     '#description' => $this->t('Imagen de fondo para el hero banner'),
       '#default_value' => $this->configuration['imagen'],
       '#weight' => '10',
-      '#upload_validators' => ['file_validate_extensions' => ['jpg', 'png', 'jpeg'],],
+      '#upload_validators' => ['file_validate_extensions' => 'jpg, png, jpeg',],
       '#upload_location' => 'public://banner/',
+      '#required' => TRUE,
     ];
 
     return $form;

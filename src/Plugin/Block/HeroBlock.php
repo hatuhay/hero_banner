@@ -29,26 +29,28 @@ class HeroBlock extends BlockBase {
   public function blockForm($form, FormStateInterface $form_state) {
     $form['titulo'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Titulo'),
-    '#description' => $this->t('Titulo del banner'),
+      '#title' => $this->t('Title'),
       '#default_value' => $this->configuration['titulo'],
       '#maxlength' => 64,
       '#size' => 64,
-      '#weight' => '1',
+      '#weight' => '0',
     ];
     $form['texto'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Texto'),
-    '#description' => $this->t('Texto del banner'),
+      '#type' => 'textarea',
+      '#title' => $this->t('Text'),
       '#default_value' => $this->configuration['texto'],
-      '#maxlength' => 128,
-      '#size' => 64,
+      '#maxlength' => 512,
+      '#weight' => '0',
+    ];
+    $form['intro'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Intro text'),
+      '#default_value' => $this->configuration['intro'],
       '#weight' => '2',
     ];
     $form['texto_link'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Texto link'),
-    '#description' => $this->t('Texto del link'),
+      '#title' => $this->t('Link text'),
       '#default_value' => $this->configuration['texto_link'],
       '#maxlength' => 128,
       '#size' => 64,
@@ -57,17 +59,15 @@ class HeroBlock extends BlockBase {
     $form['link'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Link'),
-    '#description' => $this->t('Enlace a contenido'),
       '#default_value' => $this->configuration['link'],
       '#weight' => '4',
     ];
     $form['imagen'] = [
       '#type' => 'managed_file',
-      '#title' => $this->t('Imagen'),
-    '#description' => $this->t('Imagen de fondo para el hero banner'),
+      '#title' => $this->t('Image'),
       '#default_value' => $this->configuration['imagen'],
       '#weight' => '10',
-      '#upload_validators' => ['file_validate_extensions' => ['jpg', 'png', 'jpeg'],],
+      '#upload_validators' => ['file_validate_extensions' => 'jpg', 'png', 'jpeg',],
       '#upload_location' => 'public://banner/',
     ];
 
@@ -92,6 +92,7 @@ class HeroBlock extends BlockBase {
     $this->configuration['texto_link'] = $form_state->getValue('texto_link');
     $this->configuration['link'] = $form_state->getValue('link');
     $this->configuration['imagen'] = $form_state->getValue('imagen');
+    $this->configuration['intro'] = $form_state->getValue('intro');
   }
 
   /**
@@ -107,6 +108,7 @@ class HeroBlock extends BlockBase {
     $build = [];
     $build['hero_block'] = [
       '#theme' => 'hero_banner',
+      '#intro' => $this->configuration['intro'],
       '#titulo' => $this->configuration['titulo'],
       '#texto' => $this->configuration['texto'],
       '#texto_link' => $this->configuration['texto_link'],

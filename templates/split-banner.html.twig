@@ -1,0 +1,22 @@
+{{ attach_library('hero_banner/global') }}
+
+<div class="split-area">
+
+  <div class="home-wrapper">
+    <div class="container">
+      <div class="row {{layout}}">
+        <div class="col-md-6 img-wrapper">
+          <img class="img-fluid" src="{{imagen}}" />
+        </div>
+        <div class="col-md-6 text-wrapper">
+          <div class="intro-text">{{intro|raw}}</div>
+          <h1>{{titulo|raw}}</h1>
+          <div class="lead">{{texto|raw}}</div>
+          <a class="btn btn-primary icon-arrow" href="{{link}}">{{texto_link}}</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

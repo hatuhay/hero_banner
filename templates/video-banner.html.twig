@@ -1,0 +1,26 @@
+{{ attach_library('hero_banner/video') }}
+
+<div class="hero-area">
+
+  <!-- The video -->
+  <video autoplay muted loop id="hero-video">
+    <source src="{{mp4_video}}" type="video/mp4">
+    <source src="{{ogg_video}}" type="video/ogg">
+    <source src="{{webm_video}}" type="video/webm">
+    <img src="{{imagen}}" title="{{titulo}}">
+  </video>
+
+  <!-- Optional: some overlay text to describe the video -->
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="white-text">{{titulo}}</h1>
+          <p class="lead white-text">{{texto}}</p>
+          <a class="btn btn-primary icon-arrow" href="{{link}}">{{texto_link}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

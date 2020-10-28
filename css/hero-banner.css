@@ -4,7 +4,7 @@
 .hero-area {
   height: calc(100vh - 80px);
   position: relative;
-  padding-top: 80px;
+  padding: 80px;
   padding-bottom: 80px;
 }
 .bg-image.bg-parallax {
@@ -38,6 +38,8 @@
   transform: translateY(-50%);
   left: 0;
   right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .main-button {
   position: relative;

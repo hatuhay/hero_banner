@@ -9,9 +9,10 @@
   <div class="home-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
-          <h1 class="white-text">{{titulo}}</h1>
-          <p class="lead white-text">{{texto}}</p>
+        <div class="col-md-7 text-bg">
+          <div class="intro">{{intro|raw}}</div>
+          <h1 class="white-text">{{titulo|raw}}</h1>
+          <div class="lead">{{texto|raw}}</div>
           <a class="btn btn-primary icon-arrow" href="{{link}}">{{texto_link}}</a>
         </div>
       </div>

@@ -1,0 +1,72 @@
+block.settings.hero_block:
+  type: block_settings
+  label: 'Hero Banner'
+  mapping:
+    titulo:
+      type: label
+      label: 'Titulo'
+    texto:
+      type: text
+      label: 'Texto'
+    texto_link:
+      type: text
+      label: 'Texto Link'
+    link:
+      type: text
+      label: 'Link'
+    imagen:
+      type: file
+      label: 'Imagen'
+block.settings.hero_split_block:
+  type: block_settings
+  label: 'Split Banner'
+  mapping:
+    titulo:
+      type: label
+      label: 'Titulo'
+    texto:
+      type: text
+      label: 'Texto'
+    intro:
+      type: text
+      label: 'Intro'
+    texto_link:
+      type: text
+      label: 'Texto Link'
+    link:
+      type: text
+      label: 'Link'
+    imagen:
+      type: file
+      label: 'Imagen'
+    layout:
+      type: text
+      label: 'Layout'
+block.settings.hero_video_block:
+  type: block_settings
+  label: 'Hero Video Banner'
+  mapping:
+    titulo:
+      type: label
+      label: 'Titulo'
+    texto:
+      type: text
+      label: 'Texto'
+    texto_link:
+      type: text
+      label: 'Texto link'
+    link:
+      type: text
+      label: 'Link'
+    imagen:
+      type: file
+      label: 'Imagen'
+    mp4_video:
+      type: text
+      label: 'MP4 Video'
+    ogg_video:
+      type: text
+      label: 'OGG Video'
+    webm_video:
+      type: text
+      label: 'WEBM Video'

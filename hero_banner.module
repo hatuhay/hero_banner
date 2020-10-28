@@ -30,6 +30,7 @@ function hero_banner_theme() {
   return [
     'hero_banner' => [
       'variables' => [
+        'intro' => NULL,
         'titulo' => NULL,
         'texto' => NULL,
         'texto_link' => NULL,
@@ -37,13 +38,27 @@ function hero_banner_theme() {
         'imagen' => NULL,
       ],
     ],
-    'youtube_banner' => [
+    'split_banner' => [
       'variables' => [
         'titulo' => NULL,
         'texto' => NULL,
         'texto_link' => NULL,
         'link' => NULL,
-        'url_video' => NULL,
+        'layout' => NULL,
+        'intro' => NULL,
+        'imagen' => NULL,
+      ],
+    ],
+    'video_banner' => [
+      'variables' => [
+        'titulo' => NULL,
+        'texto' => NULL,
+        'texto_link' => NULL,
+        'link' => NULL,
+        'imagen' => NULL,
+        'mp4_video' => NULL,
+        'ogg_video' => NULL,
+        'webm_video' => NULL,
       ],
     ],
   ];

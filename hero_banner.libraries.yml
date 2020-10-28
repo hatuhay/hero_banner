@@ -3,8 +3,8 @@ global:
   css:
     theme:
       css/hero-banner.css: {}
-youtube:
+video:
   version: 1.x
   css:
     theme:
-      css/youtube.css: {}
+      css/video.css: {}

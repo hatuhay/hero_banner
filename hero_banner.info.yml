@@ -2,6 +2,7 @@ name: 'Hero banner'
 type: module
 description: 'Hero banner with parallax effect'
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: 'Custom'
 dependencies:
   - block
